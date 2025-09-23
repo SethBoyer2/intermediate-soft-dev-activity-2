@@ -55,6 +55,37 @@ class Triangle(Shape):
                 f" with lengths of {self.side_1}, {self.side_2} and {self.side_3}.")
 
         @abstractmethod
-        def calculate_area(self, side_1: int, side_2: int, side_3: int):
-            sp = (side_1 + side_2 + side_3)/2
-            area = math.sqrt(sp * (sp-side_1) * (sp - side_2) * (sp - side_3))
+        def calculate_area(self, side_1: int, side_2: int, side_3: int) -> float:
+            """
+            This method takes three validated arguments, and uses
+            them to calculate the area of the shape
+
+            Args:
+            side_1(int) : side 1 of the triangle
+            side_2(int) : side 2 of the triangle
+            side_3(int) : side 3 of the triangle
+
+            Returns:
+            Area(float) : The area of the shape
+            """
+            sp = (self.__side_1 + self.__side_2 + self.__side_3)/2
+            area = math.sqrt(sp * (sp - self.__side_1) *
+                             (sp - self.__side_2) * (sp - self.__side_3))
+            return area
+
+        @abstractmethod
+        def calculate_perimeter(self, side_1: int, side_2: int, side_3: int) -> float:
+            """
+            This method takes three validated arguments and returns
+            the sum as the perimeter of the shape
+
+            Args:
+            side_1(int) : side 1 of the triangle
+            side_2(int) : side 2 of the triangle
+            side_3(int) : side 3 of the triangle
+
+            Returns:
+            Perimeter(int): the sum of all three sides.
+            """
+            perimeter = (side_1 + side_2 + side_3)
+            return perimeter

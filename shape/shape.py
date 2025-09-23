@@ -1,6 +1,5 @@
 """This module defines the Shape class."""
 from abc import ABC, abstractmethod
-import math
 __author__ = "Seth Boyer"
 __version__ = "1.0.0"
 
@@ -20,14 +19,14 @@ class Shape(ABC):
             raise ValueError("Color cannot be blank.")
 
     @abstractmethod
-    def calculate_area() -> float:
+    def calculate_area(self) -> float:
         """
         Calculates the area of a given shape.
         """
         pass
 
     @abstractmethod
-    def calculate_perimeter() -> float:
+    def calculate_perimeter(self) -> float:
         """
         Calculates the perimeter of a given shape
         """
