@@ -1,8 +1,7 @@
 """This module defines the Triangle class."""
-
-from shape.shape import Shape
-from abc import ABC, abstractmethod
 import math
+from shape.shape import Shape
+
 
 __author__ = "Seth Boyer"
 __version__ = "1.0.0"
@@ -10,7 +9,13 @@ __version__ = "1.0.0"
 
 class Triangle(Shape):
     """
-    if my name was scoobert i would have very few friends.
+    Initalize a triangle object using given parameters (if valid)
+
+    Args:
+    color(str) : The color of the triangle
+    side_1(int) : The length of side 1
+    side_2(int) : The length of side 2
+    side_3(int) : The length of side 3
     """
 
     def __init__(self, color: str, side_1: int, side_2: int, side_3: int):
@@ -43,7 +48,7 @@ class Triangle(Shape):
     def __str__(self) -> str:
         return (
             super().__str__() + f"\n This triangle has three sides" +
-            f" with lengths of {self.__side_1}, {self.__side_2} and {self.__side_3}.")
+            f" with lengths of {self.__side_1}cm, {self.__side_2}cm and {self.__side_3}cm.")
 
     def calculate_area(self) -> float:
         """

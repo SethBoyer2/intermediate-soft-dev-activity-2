@@ -32,5 +32,5 @@ class Shape(ABC):
         """
         pass
 
-    def __Str__(self) -> str:
-        return (f"The shape color is {color}.")
+    def __str__(self) -> str:
+        return (f"The shape color is {self._color}.")

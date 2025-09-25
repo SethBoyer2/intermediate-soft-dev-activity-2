@@ -41,9 +41,8 @@ class TestClient(unittest.TestCase):
 
     def test_str_returns_expected_output(self):
         expected = (
-            Shape.__str__(self.triangle) + f"\n This triangle has three sides" +
-            f" with lengths of {self.triangle._Triangle__side_1}, {self.triangle._Triangle__side_2}"
-            and f"{self.triangle._Triangle__side_3}."
+            "The shape color is Red.\n"
+            " This triangle has three sides with lengths of 12cm, 12cm and 12cm."
         )
         self.assertEqual(expected, str(self.triangle))
 
