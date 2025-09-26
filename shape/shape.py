@@ -13,6 +13,7 @@ class Shape(ABC):
     """
 
     def __init__(self, color: str):
+
         if len(color.strip()) > 0:
             self._color = color
         else:

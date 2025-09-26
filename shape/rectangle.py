@@ -23,14 +23,20 @@ class Rectangle(Shape):
         if isinstance(length, int):
             self.__length = length
         else:
-            raise (ValueError)
+            raise ValueError
 
         if isinstance(width, int):
             self.__width = width
         else:
-            raise (ValueError)
+            raise ValueError
 
     def __str__(self):
+        """
+        Returns a readable string representation of the rectangle.
+
+        Returns:
+        str: Formatted string containing color, length and width.
+        """
         return (
             super().__str__() +
             f"\n This rectangle has four sides, with the lengths of {self.__length}cm, "
@@ -38,11 +44,24 @@ class Rectangle(Shape):
         )
 
     def calculate_area(self):
+        """
+        Calculate the area of a rectangle object using given parameters (if valid)
+
+        Returns:
+        area(float) : The area of the rectangle
+
+        """
         self.area = self.__length * self.__width
 
         self.area = round(self.area, 2)
 
     def calculate_perimeter(self):
+        """
+        Calculate the perimeter of a rectangle object using given parameters (if valid)
+
+        Returns:
+        perimeter(float) : The perimeter of the rectangle
+        """
         self.perimeter = (self.__length * 2) + (self.__width * 2)
 
         self.perimeter = round(self.perimeter, 2)

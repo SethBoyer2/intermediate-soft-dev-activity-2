@@ -46,6 +46,12 @@ class Triangle(Shape):
                 "Please ensure all sides adhere to the triangle inequality theorem.")
 
     def __str__(self) -> str:
+        """
+        Returns a readable string representation of the triangle
+
+        Returns:
+        str: Formatted string including color, and length of the three sides
+        """
         return (
             super().__str__() + f"\n This triangle has three sides" +
             f" with lengths of {self.__side_1}cm, {self.__side_2}cm and {self.__side_3}cm.")
